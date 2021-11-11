@@ -65,7 +65,26 @@ public static void main(String[] args) {
 //	6개의 숫가 입력 완료
 //	2. 6개의 당첨 번호 (직접 타이핑) 임시:
 	
-	int[] winLottoNumbers = {2,13,20,30,31,41}
+	int[] winLottoNumbers = {2,13,20,30,31,41};
+	
+//	몇등인지 판단 = 몇개의 숫자가 같은지 
+	
+	int correctCount =0;
+	
+//	내 번호를 하나 들고, 당첨번호 6개를 비교 해 보자 (하나씩 비교를 6번 반복)
+	
+	for(int myNumber:myInputNumbers) {
+//		당첨 번호 6개 꺼내기
+		for(int winNum : winLottoNumbers) {
+//			내 번호와 당첨 번호가 같은가?
+			if(winNum==myNumber) {
+//				akw춘 숫라를 하나더 발견
+				correctCount++;
+			}
+		}
+	}
+	
+//	맞춘 변수가 correctCount에 확보됨. 등수 판단
 	
 }
 }
