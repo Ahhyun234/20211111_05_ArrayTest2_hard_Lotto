@@ -14,9 +14,7 @@ public static void main(String[] args) {
 		
 //		각 자리에 맞는 숫자를 입력할 때 올바를 숫자를 넣을 때 까지 입력하게 시킴
 		while(true) {
-			
-
-	
+				
 		
 		System.out.println(i+1+"번째 숫자를 입력하세요");
 		int inputNum = myScanner.nextInt(); // 입력한 숫자를 scanner에 담음
@@ -106,6 +104,36 @@ public static void main(String[] args) {
 			}
 			
 		}
+	}
+	
+/////////보너스 번호 추첨 추가
+//	1~45랜덤 + 당첨번호와 중복X
+	int bonusNum =0;
+	//하나의 보너스 번호를 제대로 뽑을 때 까지 반복
+	
+	while(true) {
+//		1~46 숫자 랜덤
+		int randomNum = (int)(Math.random()*45+1);
+//		당첨번호 안에 이미 있는지?
+		boolean isDupeOk = true;
+		for (int winNum : winLottoNumbers) {
+			if(randomNum==winNum) {
+//				중복 발견
+				isDupeOk = false;
+				
+				
+			}
+		}
+		
+//		true면 사용해도 됨
+		if(isDupeOk) {
+			
+			bonusNum = randomNum;
+			break;
+		}
+		
+		
+		
 	}
 	
 	
