@@ -135,6 +135,31 @@ public static void main(String[] args) {
 		
 		
 	}
+//	///////////////////////////////////////////////////// 오름차순 정렬을 할 것임 bubble Soㄱt
+	for(int i =0 ; i<winLottoNumbers.length;i++) {
+		
+		
+		
+//		///j+1번 칸으로 가면 배열 범위를 벗어날 위험이 있다 따라서 길이 -1까지만 가도록 함
+		for(int j=0; j<winLottoNumbers.length-1;j++) {
+//			j:0 -> 당첨번호 비교해서 순서가 잘못되었다면 자리 바꾸기
+			
+			if(winLottoNumbers[j]>winLottoNumbers[j+1]) {
+				int backUp = winLottoNumbers[j];
+				winLottoNumbers[j]= winLottoNumbers[j+1];
+				winLottoNumbers[j+1]=backUp;
+			}
+			
+			
+		}
+	}
+	
+	
+	
+//	////////////////////////////////당첨 번호도 출력
+	for (int winNum : winLottoNumbers) {
+		System.out.println("당첨 번호");
+	}
 	
 	System.out.println("보너스 번호"+bonusNum);
 	
