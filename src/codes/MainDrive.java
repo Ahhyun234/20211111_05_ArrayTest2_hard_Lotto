@@ -83,9 +83,25 @@ public static void main(String[] args) {
 			
 			System.out.println(randomNum);
 			
+//			중복검사 진행
+//			당첨 번호 배열에 랜덤 숫자가 있다면 검사 탈락
+			
+			boolean isDupOk = true;
+			
+//			당첨번호 목록 조회
+			for (int winNum ; winLottoNumbers) {
+				if (winNum==randomNum) {
+					
+					isDupOk=false;
+				}
+			}
+//			isDupOk 가 true일때? 중복 없음
+						
+			
 //			임시 - 사용
-			if(true) {
+			if(isDupOk) {
 			winLottoNumbers[i]=randomNum;
+			break;
 			}
 			
 		}
