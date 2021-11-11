@@ -48,7 +48,16 @@ public static void main(String[] args) {
 			break;
 			
 		}
-		else {System.out.println("잘못된 숫자를 입력했습니다. 다시 입력해 주세요");
+		else {
+//			왜 쓰면 안되는지?
+			if(!isRangeOk) {
+				System.out.println("1~45 숫자만 입력 가능합니다.");
+			}
+			else {System.out.println("이미 입력한 숫자 입니다.");
+				
+			}System.out.println("잘못된 숫자를 입력했습니다. 다시 입력해 주세요");
+			
+		}
 	}	
 		
 	}
