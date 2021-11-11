@@ -23,14 +23,28 @@ public static void main(String[] args) {
 		
 //		제약조건을 통과했는지 검사
 //		검사 1. 1~45 범위 맞는가? 결과를 boolean으로 저장
-		boolean isRangeOk = (1 <= inputNum) &&(InputNum<=45>);
+		boolean isRangeOk = (1 <= inputNum) &&(inputNum<=45);
+//		검사2. 이미 입력한 숫자인가? 중복검사 결과를 boolean으로 저장
+//		일단 써도 괜찮다 해뒀다가 -> 내 입력 목록에 지금 입력한 숫자가 들어있나? 찾아보자
+//		같은 숫자를 발견했다면 쓰면 안된다고 말 변경
+		
+//		입력 숫자 목록 조회 -> for each문 활용
+		boolean isDupeOk =true;
+		for(int num: myInputNumbers) {
+//			꺼내온 숫자가 입력한 숫자랑 같은가? 같다면 중복을 발견함
+			
+			if(num ==inputNum) {
+				isDupeOk = false;
+				
+			}
+		}
 		
 		
-		
-		//무조건 조건 통과
-		if(isRangeOK) {
+//	 	범위 검사 중복검사도 통과하면 숫자 대입
+		if(isRangeOk && isDupeOk) {
 			//써도 되는 숫자를 입력했다
 			myInputNumbers[i]=inputNum;
+//			다음 숫자를 받으러 while종료하고 나감
 			break;
 			
 		}
