@@ -65,7 +65,32 @@ public static void main(String[] args) {
 //	6개의 숫가 입력 완료
 //	2. 6개의 당첨 번호 (직접 타이핑) 임시:
 	
-	int[] winLottoNumbers = {2,13,20,30,31,41};
+//	int[] winLottoNumbers = {2,13,20,30,31,41};///////////////////
+	///////////3. 로또 번호를 랜덤으로 추출
+	
+	int[] winLottoNumbers = new int[6];
+	
+//	6개를 넣기 위한 for 문
+	
+	for(int i=0; 1< winLottoNumbers.length;i++) {
+		
+//		써도 되는 숫자를 뽑을 떄 까지 무한 반복
+		while(true) {
+//			랜덤 숫자 추출 -> 1~45 추출하면 범위 검사는 필요 없음
+//			랜덤 추출: Math.random() => 0.0~1.0 사이의 값이 랜덤으로 추출 됨 따라서 Math.random *45 는 0~45랜덤 따라서 +1
+			
+			int randomNum = (int)(Math.random()*45+1);
+			
+			System.out.println(randomNum);
+			
+//			임시 - 사용
+			if(true) {
+			winLottoNumbers[i]=randomNum;
+			}
+			
+		}
+	}
+	
 	
 //	몇등인지 판단 = 몇개의 숫자가 같은지 
 	
