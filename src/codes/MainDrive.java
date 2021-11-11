@@ -136,6 +136,8 @@ public static void main(String[] args) {
 		
 	}
 	
+	System.out.println("보너스 번호"+bonusNum);
+	
 	
 //	몇등인지 판단 = 몇개의 숫자가 같은지 
 	
@@ -160,7 +162,26 @@ public static void main(String[] args) {
 		System.out.println("1등");
 		}
 	else if(correctCount==5) {
-		System.out.println("3등");
+		
+//		System.out.println("3등");
+
+//		//보너스 번호가 들어있다면 2등인것을 다시 검사
+//		1)일단 못맞춘것이 디폴트 맞추면 true
+		boolean isBonusCorrect = false;
+		
+		for(int myNum : myInputNumbers) {
+			if(bonusNum==myNum) {
+				isBonusCorrect=true;
+			}
+		}
+//		당첨 맞으면 2등 아니면 3등
+		if(isBonusCorrect) {
+		System.out.println("2등");	
+		}
+		else {
+			System.out.println("3등");
+		}
+		
 		}
 	else if(correctCount==4) {
 		System.out.println("4등");
