@@ -89,7 +89,7 @@ public static void main(String[] args) {
 			boolean isDupOk = true;
 			
 //			당첨번호 목록 조회
-			for (int winNum ; winLottoNumbers) {
+			for (int winNum : winLottoNumbers) {
 				if (winNum==randomNum) {
 					
 					isDupOk=false;
@@ -100,6 +100,7 @@ public static void main(String[] args) {
 			
 //			임시 - 사용
 			if(isDupOk) {
+				System.out.println("당첨 숫자"+randomNum);
 			winLottoNumbers[i]=randomNum;
 			break;
 			}
